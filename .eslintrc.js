@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-08-25 10:40:57
+ * @LastEditTime: 2020-08-25 13:19:27
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \mgt_sys\backmanager\.eslintrc.js
+ */
 // https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
@@ -13,7 +21,7 @@ module.exports = {
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
     'plugin:vue/essential', 
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'standard'
+    // 'standard'
   ],
   // required to lint *.vue files
   plugins: [
