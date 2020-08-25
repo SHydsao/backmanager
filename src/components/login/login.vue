@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 11:27:46
- * @LastEditTime: 2020-08-25 19:12:20
+ * @LastEditTime: 2020-08-25 19:31:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\login\login.vue
@@ -36,7 +36,7 @@ export default {
       //同步写法
       // ES7 async await 
        const res = await this.$http.post('login', this.formdata)
-        // console.log(res)
+        console.log(res)
         const {
           data,
           meta: {msg,status}
@@ -44,6 +44,8 @@ export default {
       
         if (status === 200) {
           // 登录成功
+          // 0.保存token值
+          localStorage.setItem('token',data.token)
           // 1.跳转到home
           this.$router.push({name: 'home'})
           // 2.提示成功
