@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 18:57:10
- * @LastEditTime: 2020-08-25 20:39:45
+ * @LastEditTime: 2020-08-25 20:47:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\home\home.vue
@@ -28,7 +28,11 @@
     <el-container>
       <el-aside width="200px" class="aside">
         <!-- 侧边栏导航 -->
-        <el-menu :unique-opened="true">
+        <!-- unique-opened 保持一个子菜单的展开 -->
+        <!-- router 开启路由模式 -->
+        <el-menu 
+        :unique-opened="true" 
+        :router="true">
           <!-- 1 -->
           <el-submenu index="1">
             <template slot="title">
@@ -36,7 +40,7 @@
               <span>用户管理</span>
             </template>
             <!-- <template slot="title">分组一</template> -->
-            <el-menu-item index="1-1">
+            <el-menu-item index="users">
               <i class="el-icon-menu"></i>
               <span>用户列表</span>
             </el-menu-item>
@@ -104,7 +108,9 @@
           
         </el-menu>
       </el-aside>
-      <el-main class="main">Main</el-main>
+      <el-main class="main">
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
