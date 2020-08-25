@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 18:57:10
- * @LastEditTime: 2020-08-25 20:33:28
+ * @LastEditTime: 2020-08-25 20:39:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\home\home.vue
@@ -20,7 +20,7 @@
         </el-col>
         <el-col :span="2">
           <div class="grid-content bg-purple">
-            <a href="#" class="loginout">退出</a>
+            <a href="#" class="loginout" @click="handleSignout">退出</a>
           </div>
         </el-col>
       </el-row>
@@ -123,7 +123,16 @@ export default {
  data: () => ({}),
 
   created() {},
-  methods: {}
+  methods: {
+    handleSignout(){
+      //1.清除token
+      localStorage.clear()
+      //2.提示
+      this.$message.success('退出成功')
+      //3.来到login组件
+      this.$router.push({name:'login'})
+    }
+  }
 };
 </script>
 <style>
