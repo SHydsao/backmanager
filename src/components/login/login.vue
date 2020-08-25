@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 11:27:46
- * @LastEditTime: 2020-08-25 18:54:25
+ * @LastEditTime: 2020-08-25 18:56:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\login\login.vue
@@ -43,7 +43,7 @@ export default {
         if (status === 200) {
           // 登录成功
           // 1.跳转到home
-          // this.$router.push({name: 'home'})
+          this.$router.push({name: 'home'})
           // 2.提示成功
             this.$message.success(msg);
         }
