@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 18:57:10
- * @LastEditTime: 2020-08-25 19:56:05
+ * @LastEditTime: 2020-08-25 20:24:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\home\home.vue
@@ -12,7 +12,7 @@
       <el-row>
         <el-col :span="4">
           <div class="grid-content bg-purple">
-            <img src="../../assets/logo.jpg" alt="无法显示该图片">
+            <img src="../../assets/logo.jpg" alt="无法显示该图片" />
           </div>
         </el-col>
         <el-col :span="18" class="middle">
@@ -26,7 +26,84 @@
       </el-row>
     </el-header>
     <el-container>
-      <el-aside width="200px" class="aside">Aside</el-aside>
+      <el-aside width="200px" class="aside">
+        <!-- 侧边栏导航 -->
+        <el-menu :unique-opened="true">
+          <!-- 1 -->
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>用户管理</span>
+            </template>
+            <!-- <template slot="title">分组一</template> -->
+            <el-menu-item index="1-1">
+              <i class="el-icon-menu"></i>
+              <span>用户列表</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 2 -->
+             <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>权限管理</span>
+            </template>
+            <!-- <template slot="title">分组一</template> -->
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>角色列表</span>
+            </el-menu-item>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>权限列表</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 3 -->
+             <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>商品管理</span>
+            </template>
+            <!-- <template slot="title">分组一</template> -->
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>商品列表</span>
+            </el-menu-item>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>分类参数</span>
+            </el-menu-item>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>商品分类</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 4 -->
+             <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>订单管理</span>
+            </template>
+            <!-- <template slot="title">分组一</template> -->
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>订单列表</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 5 -->
+             <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>数据统计</span>
+            </template>
+            <!-- <template slot="title">分组一</template> -->
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>数据报表</span>
+            </el-menu-item>
+          </el-submenu>
+          
+        </el-menu>
+      </el-aside>
       <el-main class="main">Main</el-main>
     </el-container>
   </el-container>
@@ -51,16 +128,16 @@ export default {
 .main {
   background-color: #e9eef3;
 }
-.grid-content img{
+.grid-content img {
   height: 60px;
   width: 180px;
 }
 /* 头部样式 */
-.middle{
- text-align: center;
+.middle {
+  text-align: center;
 }
-.loginout{
- text-decoration: none;
+.loginout {
+  text-decoration: none;
   line-height: 60px;
 }
 </style>
