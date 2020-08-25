@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 18:57:10
- * @LastEditTime: 2020-08-25 20:24:04
+ * @LastEditTime: 2020-08-25 20:33:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\home\home.vue
@@ -110,7 +110,18 @@
 </template>
 <script>
 export default {
+  //new Vue之前自动触发
+  beforeCreate() {
+  //获取token
+  const token = localStorage.getItem('token')
+  if(!token){
+      //如果没有 就 跳到 登录界面
+    this.$router.push({name:'login'})
+  }
+    //如果有 token 继续渲染组件  
+  },
  data: () => ({}),
+
   created() {},
   methods: {}
 };
