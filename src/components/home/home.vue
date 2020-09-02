@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 18:57:10
- * @LastEditTime: 2020-08-25 20:47:24
+ * @LastEditTime: 2020-09-02 09:03:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\components\home\home.vue
@@ -52,11 +52,11 @@
               <span>权限管理</span>
             </template>
             <!-- <template slot="title">分组一</template> -->
-            <el-menu-item index="1-1">
+            <el-menu-item index="role">
               <i class="el-icon-location"></i>
               <span>角色列表</span>
             </el-menu-item>
-            <el-menu-item index="1-1">
+            <el-menu-item index="rights">
               <i class="el-icon-location"></i>
               <span>权限列表</span>
             </el-menu-item>

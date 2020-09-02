@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-25 20:42:38
- * @LastEditTime: 2020-09-01 17:18:34
+ * @LastEditTime: 2020-09-02 17:38:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Editv
  * @FilePath: \mgt_sys\backmanager\src\components\users\users.vue
@@ -217,7 +217,7 @@ export default {
       const res = await this.$http.put(`users/${this.currentUserId}/role`,{
         rid:this.currentRoleId
       })
-      console.log(res)
+      // console.log(res)
       //关闭对话框
       this.dialogFormVisibleRel = false
       
@@ -236,7 +236,7 @@ export default {
 
       //获取当前用户的角色id
       const res = await this.$http.get(`users/${user.id}`)
-      // console.log(res)
+      console.log(res)
       this.currentRoleId = res.data.data.rid
       this.dialogFormVisibleRel = true
     },
@@ -355,10 +355,8 @@ export default {
    async getUserList(){
      //除了登录以外的API 都需要授权
      //需要授权的API 必须在请求头中使用 Authorization 字段提供 token 令牌
-     const AUTH_TOKEN = localStorage.getItem('token')
-     this.$http.defaults.headers.common['Authorization'] = AUTH_TOKEN;
     const res = await this.$http.get(`users?query=${this.query}&pagenum=${this.pagenum}&pagesize=${this.pagesize}`)
-    console.log(res)
+    // console.log(res)
 
     const {meta:{status,msg},data:{users,total}} = res.data
     if(status === 200){
