@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-25 12:41:37
- * @LastEditTime: 2020-09-02 08:48:22
+ * @LastEditTime: 2020-09-03 20:11:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \mgt_sys\backmanager\src\plugins\http.js
@@ -12,6 +12,8 @@ const MyHttpServer = {}
 MyHttpServer.install = (Vue) => {
   // 添加实例方法
   axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
+  // axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1/'
+  
 
   //在请求发起之前 会先来到下面的回调函数 
   // 添加请求拦截器
@@ -42,9 +44,6 @@ MyHttpServer.install = (Vue) => {
     });
 
     //除了登录之外，都需要设重头部
-
-
-
 
     //在请求发起之前 设置头部
 
